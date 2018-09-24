@@ -46,7 +46,7 @@ class GameBoard extends Component{
 
     render(){
         return(
-            <div className="col-10 mt-5 p-3 text-center justify-content-center mx-auto">
+            <div className="col-10 mt-5 mb-5 p-3 text-center justify-content-center mx-auto">
                 
                 {stable.map( ({id, name, image}) => 
                 <Card key={id} name={name} image={image} onClick={() => this.clickHandle(id)}/>

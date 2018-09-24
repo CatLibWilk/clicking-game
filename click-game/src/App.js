@@ -14,7 +14,6 @@ class App extends Component {
     }
 
     updateScore(){
-      console.log("running")
       
 
       const score = this.state.score + 1;
