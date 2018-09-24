@@ -3,9 +3,22 @@ import Card from "./Card.js";
 import players from "../players.json";
 
 class GameBoard extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            players
+        }
+    }
 
     clickHandle(id) {
-        console.log(id)
+        this.props.updateScore()
+        const players = this.state.players.filter(player => {
+            if(player.id !== id){return true}
+        });
+
+
+
+        this.setState( {players} )
     }
 
     render(){

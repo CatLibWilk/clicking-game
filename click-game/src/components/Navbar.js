@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 class Navbar extends Component {
 
     render(){
@@ -10,7 +11,7 @@ class Navbar extends Component {
 
                 <div className="col-4 ml-auto">
                     <div className="col-6 float-left mx-auto" id="current-score-div">
-                        <h3>Current Score: </h3>
+                        <h3>Current Score: {this.props.score}</h3>
                     </div>
 
                     <div className="col-6 float-left mx-auto" id="top-score-div">
