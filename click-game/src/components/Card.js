@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const Card = props => (
+const Card = ({id, name, image, onClick}) => (
 
-    <div className="col-3 p-2 float-left" key={props.id} name={props.name}>
-        <img className="img-thumbnail img-fluid" src={props.image}></img>
+    <div className="col-3 p-2 float-left" key={id} name={name}>
+        <img className="img-thumbnail img-fluid" src={image} onClick={() => onClick(this.id)}></img>
     </div>
 )
 export default Card;
