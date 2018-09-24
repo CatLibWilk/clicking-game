@@ -13,9 +13,11 @@ class App extends Component {
     }
 
     updateScore(){
-      console.log("update score")
-      // const updatedScore = this.state.score++;
-      // this.setState({score: updatedScore})
+      console.log("running")
+
+      const score = this.state.score + 1;
+
+      this.setState( {score} )
     }
 
   render() {
