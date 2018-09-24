@@ -19,6 +19,7 @@ class App extends Component {
       const score = this.state.score + 1;
 
       this.setState( {score: score} )
+
     }
 
     gameReset(){
@@ -33,7 +34,9 @@ class App extends Component {
       }else{
         this.setState( {score:score} )
       }
+
     }
+
 
   render() {
     return (
