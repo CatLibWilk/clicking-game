@@ -15,7 +15,7 @@ class Navbar extends Component {
                     </div>
 
                     <div className="col-6 float-left mx-auto" id="top-score-div">
-                        <h3>Top Score: </h3>
+                        <h3>Top Score: {this.props.best}</h3>
                     </div>
                 </div>
             </nav>

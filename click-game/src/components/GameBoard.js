@@ -11,14 +11,24 @@ class GameBoard extends Component{
     }
 
     clickHandle(id) {
-        this.props.updateScore()
-        const players = this.state.players.filter(player => {
+        const updatePlayers = this.state.players.filter(player => {
             if(player.id !== id){return true}
         });
 
+        if(updatePlayers.length === this.state.players.length){
+            console.log("you lose!");
+            this.props.gameReset();
+            this.setState( {players: players} )
+            console.log(this.state)
+
+        }else{
+            this.props.updateScore();
+            this.setState( {players: updatePlayers} )
+
+        }
 
 
-        this.setState( {players} )
+
     }
 
     render(){
