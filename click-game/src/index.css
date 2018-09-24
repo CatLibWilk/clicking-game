@@ -4,6 +4,13 @@ body {
   font-family: sans-serif;
 }
 
-.clicked {
-  background: red;
+
+img{
+  height: 175px;
+  width: 175px;
+} 
+
+img:hover{
+  box-shadow: 5px 5px 100px gold;
+  transform: scale(1.1)
 }

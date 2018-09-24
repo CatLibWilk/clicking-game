@@ -4,6 +4,7 @@ import players from "../players.json";
 
 let stable = players;
 
+
 class GameBoard extends Component{
     constructor(props){
         super(props);
@@ -23,12 +24,13 @@ class GameBoard extends Component{
         } 
 
     clickHandle(id) {
+        console.log(this.state.players)
         const updatePlayers = this.state.players.filter(player => {
             if(player.id !== id){return true}
         });
 
         if(updatePlayers.length === this.state.players.length){
-            console.log("you lose!");
+            alert("you lose!");
             this.props.gameReset();
             this.setState( {players: players} )
             console.log(this.state)
@@ -45,7 +47,8 @@ class GameBoard extends Component{
     render(){
         return(
             <div className="col-10 mt-5 p-3 text-center justify-content-center mx-auto">
-                 {stable.map( ({id, name, image}) => 
+                
+                {stable.map( ({id, name, image}) => 
                 <Card key={id} name={name} image={image} onClick={() => this.clickHandle(id)}/>
             )}
 

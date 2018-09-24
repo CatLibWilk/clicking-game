@@ -15,9 +15,13 @@ class App extends Component {
 
     updateScore(){
       console.log("running")
+      
 
       const score = this.state.score + 1;
-
+      if(score >= 12){
+        alert("You win!");
+        this.gameReset();
+      }
       this.setState( {score: score} )
 
     }
