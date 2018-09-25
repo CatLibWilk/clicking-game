@@ -7,7 +7,7 @@ class Navbar extends Component {
         return(
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <h1 className="navbar-brand">ClickMaster Ultra+</h1>
+                <h1 className="navbar-brand">PackersMaster Ultra+</h1>
 
                 <div className="col-5 ml-auto">
                     <div className="col-6 float-left mx-auto" id="current-score-div">
