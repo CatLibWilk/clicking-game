@@ -17,25 +17,44 @@ class App extends Component {
       
 
       const score = this.state.score + 1;
+      console.log(`${score} ||| ${this.state.score}`)
       if(score >= 12){
         alert("You win!");
-        this.gameReset();
+        this.setState( {score: score} )
+        this.gameReset(12);
+        
       }
       this.setState( {score: score} )
-
+      console.log(`${score} ||| ${this.state.score}`)
     }
 
-    gameReset(){
-      const score = 0;
+    gameReset(passed){
 
-      if(this.state.score > this.state.best){
-        const scoreSave = this.state.score
+      let scoreSave = null;
+
       
+      let score = 0;
+
+      console.log('game reset run')
+      if(this.state.score > this.state.best){
+        console.log('if')
+        console.log(`if score = ${this.state.score}`);
+
+          if(passed){
+            console.log('was passed')
+            scoreSave = parseInt(passed);
+
+          }else{
+          scoreSave = this.state.score
+          }
+
       this.setState( {
         score: score,
         best: scoreSave} )
+
       }else{
-        this.setState( {score:score} )
+        console.log('else')
+        this.setState( {score: score} )
       }
 
     }

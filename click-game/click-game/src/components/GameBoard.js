@@ -24,9 +24,10 @@ class GameBoard extends Component{
         } 
 
     clickHandle(id) {
-        console.log(this.state.players)
+
         const updatePlayers = this.state.players.filter(player => {
             if(player.id !== id){return true}
+            
         });
 
         if(updatePlayers.length === this.state.players.length){
