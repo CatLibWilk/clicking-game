@@ -9,7 +9,7 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <h1 className="navbar-brand">ClickMaster Ultra+</h1>
 
-                <div className="col-4 ml-auto">
+                <div className="col-5 ml-auto">
                     <div className="col-6 float-left mx-auto" id="current-score-div">
                         <h3>Current Score: {this.props.score}</h3>
                     </div>
